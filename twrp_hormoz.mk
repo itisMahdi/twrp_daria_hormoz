@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Configure emulated_storage.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-PRODUCT_NAME := lineage_hormoz
+PRODUCT_NAME := twrp_hormoz
 PRODUCT_DEVICE := hormoz
 PRODUCT_MANUFACTURER := Daria
 PRODUCT_BRAND := Daria
