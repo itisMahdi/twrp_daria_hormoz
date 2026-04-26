@@ -96,7 +96,6 @@ BOARD_MAIN_PARTITION_LIST := system \
                              system_ext \
                              vendor \
                              product \
-                             odm \
                              vendor_dlkm \
                              odm_dlkm
 
@@ -196,7 +195,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT :=
 TW_LOAD_VENDOR_BOOT_MODULES := true
 
 # Maintainer/Version
-TW_DEVICE_VERSION := perilouspike/beta-1
+TW_DEVICE_VERSION := DariaFucker/beta-1
 
 TW_LOAD_VENDOR_MODULES := "haptic.ko"
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
