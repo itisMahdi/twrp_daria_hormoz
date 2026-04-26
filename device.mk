@@ -29,25 +29,29 @@ AB_OTA_PARTITIONS += \
     audio_dsp \
     boot \
     ccu \
+    connsys_bt \
+    connsys_gnss \
+    connsys_wifi \
     dpm \
     dtbo \
     gpueb \
     gz \
+    init_boot \
     lk \
     logo \
     mcf_ota \
     mcupm \
-    md1img \
+    modem \
     mvpu_algo \
-    odm \
     odm_dlkm \
     pi_img \
-    preloader_raw \
+    preloader \
     product \
     scp \
     spmfw \
     sspm \
     system \
+    system_dlkm \
     system_ext \
     tee \
     vbmeta \
@@ -56,9 +60,8 @@ AB_OTA_PARTITIONS += \
     vcp \
     vendor \
     vendor_boot \
-    vendor_dlkm \
-    mi_ext
-
+    vendor_dlkm 
+    
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
