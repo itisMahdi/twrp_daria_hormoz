@@ -2,7 +2,7 @@
     Input:
         device/daria/hormoz/manifest.xml
 -->
-<manifest version="7.0" type="device" target-level="8">
+<manifest version="4.0" type="device" target-level="8">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
