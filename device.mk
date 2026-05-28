@@ -72,7 +72,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery 
+    android.hardware.boot@1.2-mtkimpl.recovery
+
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service    
 
 PRODUCT_PACKAGES := \
     bootctrl.mt6897 \
@@ -88,25 +93,17 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     checkpoint_gc
 
-# Drm
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-service \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service.rc
 
 # Mtk plpath utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
     mtk_plpath_utils.recovery
-
-# Additional Target Libraries
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libion \
-    libxml2 \
-    android.hardware.keymaster@4.1
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -122,6 +119,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.system.keystore2
 
+# Drm
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4    
+
+# Additional Target Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hardware.keymaster@4.1 \
+    android.hardware.vibrator-V1-ndk_platform \
+    android.hardware.graphics.common@1.0 \
+    libion \
+    libxml2 \
+    android.hardware.health@2.0-impl-default \
+    android.hardware.boot@1.0
+
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V1-ndk_platform.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.graphics.common@1.0.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.0-impl-default.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.0.so
