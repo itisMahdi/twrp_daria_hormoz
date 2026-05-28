@@ -2,7 +2,7 @@
     Input:
         system/libhidl/vintfdata/device_compatibility_matrix.default.xml
 -->
-<compatibility-matrix version="7.0" type="device">
+<compatibility-matrix version="4.0" type="device">
     <hal format="hidl" optional="true">
         <name>android.hidl.manager</name>
         <version>1.0</version>
