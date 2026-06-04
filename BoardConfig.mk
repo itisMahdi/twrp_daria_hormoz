@@ -199,7 +199,7 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/recovery/root/l
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/recovery/root/lib/modules/modules.load))
 
 # Maintainer/Version
-TW_DEVICE_VERSION := i love Daria <3
+TW_DEVICE_VERSION := Mahdi_Asghari
 
 TW_LOAD_VENDOR_MODULES := "haptic.ko"
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
